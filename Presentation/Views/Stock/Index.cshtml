@@ -5,11 +5,11 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="chat-message">
-    <p>@ViewBag.Message</p>
+<div class="welcome-message">
+    <p>Hello! Welcome to LSEG chatbot. Please select a Stock Exchange</p>
 </div>
 
-<h2>Select a Stock Exchange</h2>
+<h2></h2>
 <ul class="stock-exchange-list">
     <li><a href="@Url.Action("StockMenu", "Stock", new { exchangeCode = "LSE" })">LSE</a></li>
     <li><a href="@Url.Action("StockMenu", "Stock", new { exchangeCode = "NASDAQ" })">NASDAQ</a></li>

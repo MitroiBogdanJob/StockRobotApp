@@ -18,20 +18,17 @@ namespace StockApp.WebUI.Controllers
 
         public IActionResult Index()
         {
-            ViewBag.Message = "Hello! Welcome to LSEG chatbot. Please select a Stock Exchange.";
             return View();
         }
 
         public IActionResult StockMenu(string exchangeCode)
         {
-            ViewBag.Message = "Please select a stock.";
             List<Stock> stocks = _getStocksByExchangeUseCase.Execute(exchangeCode);
             return View(stocks);
         }
 
         public IActionResult StockDetails(string stockCode)
         {
-            ViewBag.Message = "Here is the stock price.";
             Stock stock = _getStockDetailsUseCase.Execute(stockCode);
             return View(stock);
         }

@@ -3,13 +3,17 @@
 @{
     ViewData["Title"] = "Stock Details";
 }
+
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<div class="chat-message">
-    <p>@ViewBag.Message</p>
+
+<div class="welcome-message">
+    <p>Here is the stock price.</p>
 </div>
 
 <h2>@Model.StockName</h2>
 <p>Price: @Model.Price</p>
-<a href="@Url.Action("StockMenu", "Stock", new { exchangeCode = "LSE" })">Back to Stock Menu</a>
+<ul class="stock-exchange-list">
+<a href="@Url.Action("StockMenu", "Stock", new { exchangeCode = "LSE" })"> < Back to Stock Menu</a>
+</ul>

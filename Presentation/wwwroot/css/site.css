@@ -1,20 +1,8 @@
-﻿/* Setează dimensiunea fontului pentru întregul document */
-html {
-    font-size: 14px;
-    position: relative;
-    min-height: 100%;
+﻿/* Stil general pentru text */
+body {
+    color: white; /* Setează culoarea textului la alb pentru toată aplicația */
 }
 
-@media (min-width: 768px) {
-    html {
-        font-size: 16px;
-    }
-}
-
-/* Stiluri pentru butoane și formulare pentru a evidenția focusul */
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
 
 /* Stilizare pentru întreaga casuță de chat */
 .chat-container {
@@ -26,62 +14,37 @@ html {
     background-color: #f8f9fa;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
-/* Stilizare pentru header */
-.header-content {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
 /* Stilizare pentru imaginea capului de robot */
 .robot-head {
     width: 50px;
     height: 50px;
-    margin-right: 15px;
 }
 
-/* Stilizare pentru mesajul de bun venit */
+/* Stil pentru mesajul de bun venit */
 .welcome-message {
     font-size: 1rem;
-    color: #495057;
+    color: #007bff; /* Setează culoarea textului */
+    margin: 0; /* Elimină marginea implicită */
+    display: flex;
+  
 }
 
-/* Stilizare pentru mesajele de chat */
-.chat-message {
-    background-color: #e9ecef;
-    padding: 10px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    border: 1px solid #ced4da;
-    font-size: 1rem;
-    color: #495057;
-    text-align: center;
+/* Stil pentru titlul "Select a Stock Exchange" */
+.chat-message p {
+    color: #007bff; /* Setează culoarea la aceeași nuanță de albastru ca și robotul */
+    font-size: 1.25rem; /* O mărime puțin mai mare pentru titlu */
+    font-weight: bold;
+    margin-bottom: 20px; /* Spațiu între titlu și restul conținutului */
 }
 
-/* Stilizare pentru lista de piețe bursiere */
-.stock-exchange-list {
-    list-style-type: none;
-    padding: 0;
-    margin: 20px 0;
+
+.stock-exchange-list a {
+    text-decoration: none;
+    color: white; /* Setează culoarea textului la alb */
+    font-weight: bold;
 }
 
-    .stock-exchange-list li {
-        margin-bottom: 10px;
+    .stock-exchange-list a:hover {
+        text-decoration: underline;
+        color: #007bff; /* Schimbă culoarea la hover pentru a se potrivi cu robotul */
     }
-
-    .stock-exchange-list a {
-        text-decoration: none;
-        color: #007bff;
-        font-weight: bold;
-    }
-
-        .stock-exchange-list a:hover {
-            text-decoration: underline;
-            color: #0056b3;
-        }
-
-/* Eliminarea footer-ului */
-footer {
-    display: none;
-}
