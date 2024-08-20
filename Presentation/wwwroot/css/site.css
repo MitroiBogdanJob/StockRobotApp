@@ -18,15 +18,15 @@ body {
 .robot-head {
     width: 50px;
     height: 50px;
+    margin-left: 10px; /* Adaugă un mic spațiu între text și capul robotului */
 }
 
-/* Stil pentru mesajul de bun venit */
-.welcome-message {
+.select-message {
     font-size: 1rem;
     color: #007bff; /* Setează culoarea textului */
     margin: 0; /* Elimină marginea implicită */
     display: flex;
-  
+    align-items: center; /* Aliniază textul și imaginea pe centrul vertical */
 }
 
 /* Stil pentru titlul "Select a Stock Exchange" */

@@ -8,12 +8,13 @@
 </head>
 <body>
     <div class="chat-container">
-        <header>
-            <div class="header-content">
-                <img src="~/images/robot-head.png" alt="Robot Head" class="robot-head" />
-                <p class="welcome-message">@ViewBag.Message</p>
-            </div>
-        </header>
+
+        <div class="select-message">
+            <img src="~/images/robot-head.png" alt="Robot Head" class="robot-head">
+            <p>Hello! Welcome to LSEG chatbot.</p>
+
+        </div>
+     
         <div class="container">
             @RenderBody()
         </div>
