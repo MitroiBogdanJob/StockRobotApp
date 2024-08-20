@@ -1,0 +1,17 @@
+@{
+    ViewData["Title"] = "Home Menu";
+}
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="chat-message">
+    <p>@ViewBag.Message</p>
+</div>
+
+<h2>Select a Stock Exchange</h2>
+<ul class="stock-exchange-list">
+    <li><a href="@Url.Action("StockMenu", "Stock", new { exchangeCode = "LSE" })">LSE</a></li>
+    <li><a href="@Url.Action("StockMenu", "Stock", new { exchangeCode = "NASDAQ" })">NASDAQ</a></li>
+    <li><a href="@Url.Action("StockMenu", "Stock", new { exchangeCode = "NYSE" })">NYSE</a></li>
+</ul>

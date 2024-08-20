@@ -1,0 +1,20 @@
+@model IEnumerable<StockApp.Core.Stock>
+
+@{
+    ViewData["Title"] = "Stock Menu";
+}
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="chat-message">
+    <p>@ViewBag.Message</p>
+</div>
+
+<h2>Select a Stock</h2>
+<ul class="stock-list">
+    @foreach (var stock in Model)
+    {
+        <li><a href="@Url.Action("StockDetails", "Stock", new { stockCode = stock.Code })">@stock.StockName</a></li>
+    }
+</ul>
+<a href="@Url.Action("Index", "Stock")" class="back-link">Back to Home Menu</a>

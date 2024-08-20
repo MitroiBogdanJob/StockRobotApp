@@ -1,0 +1,15 @@
+@model StockApp.Core.Stock
+
+@{
+    ViewData["Title"] = "Stock Details";
+}
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="chat-message">
+    <p>@ViewBag.Message</p>
+</div>
+
+<h2>@Model.StockName</h2>
+<p>Price: @Model.Price</p>
+<a href="@Url.Action("StockMenu", "Stock", new { exchangeCode = "LSE" })">Back to Stock Menu</a>
