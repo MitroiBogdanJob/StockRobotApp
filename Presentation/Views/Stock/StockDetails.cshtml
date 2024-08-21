@@ -15,5 +15,7 @@
 <h2>@Model.StockName</h2>
 <p>Price: @Model.Price</p>
 <ul class="stock-exchange-list">
-<a href="@Url.Action("StockMenu", "Stock", new { exchangeCode = "LSE" })"> < Back to Stock Menu</a>
+    <a href="@Url.Action("StockMenu", "Stock", new { exchangeCode = "LSE" })"> < Back to Stock Menu</a>
+    <br>
+    <a href="@Url.Action("Index", "Stock")" class="back-link"> <br> < Back to Home Menu  </a>
 </ul>
