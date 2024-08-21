@@ -1,8 +1,8 @@
-
-using StockApp.Application;
+﻿using StockApp.Application;
 using StockApp.Core;
 using StockApp.Infrastructure;
 using StockApp.WebUI.Middlewares;
+using Microsoft.Extensions.Configuration;
 
 namespace Presentation
 {
@@ -13,8 +13,11 @@ namespace Presentation
             var builder = WebApplication.CreateBuilder(args);
             builder.Services.AddControllersWithViews();
 
-            string relativePath = Path.Combine("..", "Infrastructure", "Data", "Chatbot - stock data.json");
-            string infrastructurePath = Path.GetFullPath(Path.Combine(builder.Environment.ContentRootPath, relativePath));
+            // Citim calea relativă din appsettings.json
+            string relativePath = builder.Configuration["DataSettings:DataFilePath"];
+
+            // Calculăm calea absolută, presupunând că programul rulează din directorul `Presentation`
+            string infrastructurePath = Path.GetFullPath(Path.Combine(builder.Environment.ContentRootPath, "..", relativePath));
 
             builder.Services.AddSingleton<IStockRepository>(sp =>
                 new StockRepository(infrastructurePath, sp.GetRequiredService<ILogger<StockRepository>>()));
