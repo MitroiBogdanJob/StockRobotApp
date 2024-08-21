@@ -16,7 +16,7 @@
 
 ## Prerequisites
 
-- .NET 8.0 SDK**: Ensure you have .NET 8 SDK installed on your development machine.
+- .NET 8.0 : Ensure you have .NET 8.0 SDK installed on your development machine.
 -  The json file.
 
 ## Setup and Configuration
