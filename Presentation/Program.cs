@@ -13,10 +13,8 @@ namespace Presentation
             var builder = WebApplication.CreateBuilder(args);
             builder.Services.AddControllersWithViews();
 
-            // Citim calea relativă din appsettings.json
+            
             string relativePath = builder.Configuration["DataSettings:DataFilePath"];
-
-            // Calculăm calea absolută, presupunând că programul rulează din directorul `Presentation`
             string infrastructurePath = Path.GetFullPath(Path.Combine(builder.Environment.ContentRootPath, "..", relativePath));
 
             builder.Services.AddSingleton<IStockRepository>(sp =>
